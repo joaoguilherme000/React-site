@@ -1,12 +1,7 @@
 .App {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-align: center;
-}
-
-.lista {
-  color: rgb(0, 26, 255);
-}
-
-.lista li {
-  margin-top: 8px;
+  font-family: sans-serif;
+  background-color: #007ce9;
+  height: 100%;
+  min-height: 100vh;
+  color: white;
 }

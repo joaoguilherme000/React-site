@@ -1,5 +1,6 @@
-import './style.css'
+import './style.css';
 import Navbar from './components/NavBar/Navbar';
+import './Reset.css';
 
 function App() {
   return (
