@@ -1,0 +1,37 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    background: #333;
+    width: 150px;
+    top: 100%;
+    left: 0;
+  }
+  
+  .dropdown.open ul {
+    display: block;
+  }
+  
+  .dropdown ul li {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .dropdown ul li:hover {
+    background: #555;
+  }
