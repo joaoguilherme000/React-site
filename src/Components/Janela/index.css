@@ -1,0 +1,73 @@
+.content {
+    font-size: 23px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 9vh;
+}
+
+.janela {
+    border-radius: 1em;
+    padding: 2vh;
+    color: #000000; 
+    display: flex;
+    flex-direction: column;
+    width: 30vh;
+}
+
+.nome {
+    margin-bottom: 2vh;
+}
+
+.senha {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.entrar {
+    margin-top: 3vh;
+    padding: 10px; /* Adicione algum preenchimento para melhor aparência */
+    border: 1px solid #ccc; /* Adicione uma borda */
+    border-radius: 5px; /* Arredonde as bordas */
+    font-size: 16px; /* Escolha um tamanho de fonte adequado */
+    outline: none; /* Remova o contorno padrão ao focar */
+    transition: border-color 0.2s; /* Adicione uma transição suave na borda */
+    font-weight: bold;
+}
+
+.entrar:hover {
+    border-color: #f4a100; /* Mude a cor da borda ao focar */
+    background-color: #f4a100;
+}
+
+.senha-input {
+    padding: 10px; /* Adicione algum preenchimento para melhor aparência */
+    border: 1px solid #ccc; /* Adicione uma borda */
+    border-radius: 5px; /* Arredonde as bordas */
+    font-size: 16px; /* Escolha um tamanho de fonte adequado */
+    outline: none; /* Remova o contorno padrão ao focar */
+    transition: border-color 0.2s; /* Adicione uma transição suave na borda */
+    font-weight: bold;
+}
+  
+.senha-input:focus {
+    border-color: #007bff; /* Mude a cor da borda ao focar */
+}
+
+.nome-input {
+    padding: 10px; /* Adicione algum preenchimento para melhor aparência */
+    border: 1px solid #ccc; /* Adicione uma borda */
+    border-radius: 5px; /* Arredonde as bordas */
+    font-size: 16px; /* Escolha um tamanho de fonte adequado */
+    outline: none; /* Remova o contorno padrão ao focar */
+    transition: border-color 0.2s; /* Adicione uma transição suave na borda */
+    font-weight: bold;
+  }
+  
+  .nome-input:focus {
+    border-color: #007bff; /* Mude a cor da borda ao focar */
+  }
