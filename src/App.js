@@ -1,19 +1,14 @@
-import './Style.css';
-import logo from './components/img/java.png';
-import './Reset.css';
-import TituloTopBar from './components/text/TituloTopBar';
+import logo from './Assets/logo.svg';
+import './Style/App.css';
 
-export default function App() {
+function App() {
   return (
-    <div className="app-container">
-      <div className="top-bar">
-        <TituloTopBar/>
-      </div>
-      <body className="content">
-          <div className='model'>
-            <img alt="logo" src={logo} />
-          </div>
-      </body>
-    </div>
+    <>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+      </header>
+    </>
   );
 }
+
+export default App;
