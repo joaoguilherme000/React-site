@@ -1,10 +1,24 @@
 .App-header {
-    background-color: #232323;
-    min-height: 1vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
+  background-color: #232323;
+  min-height: 1vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.config {
+  padding: 10px; /* Adicione algum preenchimento para melhor aparência */
+  border: 1px solid #ccc; /* Adicione uma borda */
+  border-radius: 5px; /* Arredonde as bordas */
+  font-size: 16px; /* Escolha um tamanho de fonte adequado */
+  outline: none; /* Remova o contorno padrão ao focar */
+  transition: border-color 0.2s; /* Adicione uma transição suave na borda */
+  font-weight: bold;
+}
+
+.config:hover {
+
+}
