@@ -1,9 +1,10 @@
 import './index.css'
+import userIcone from '../../Assets/user.svg'
 
 export default function Janela () {
     return (
         <div className='content'>
-            <h2>Login</h2>
+            <img src={userIcone} className="userIcone" alt="UserIcone" />
             <form name="cadastro" className='janela'>
 
                 <label for="usuario" className='nome'>Nome: </label>
@@ -12,9 +13,9 @@ export default function Janela () {
                 <label for="senha" className='senha'>Senha: </label>
                 <input type="password" name="senha" id="senha" required className="senha-input"/>
 
-                <input type="submit" value="Enviar" className='entrar'/>
+                <input type="submit" value="Entrar" className='entrar'/>
             </form>
-            <h5><a href=''>Esqueci a senha?</a></h5>
+            <h5><a href='index.html'>Esqueci a senha?</a></h5>
         </div>
     );
 }
