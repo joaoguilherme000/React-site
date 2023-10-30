@@ -10,15 +10,15 @@
 }
 
 .config {
-  padding: 10px; /* Adicione algum preenchimento para melhor aparência */
-  border: 1px solid #ccc; /* Adicione uma borda */
-  border-radius: 5px; /* Arredonde as bordas */
-  font-size: 16px; /* Escolha um tamanho de fonte adequado */
-  outline: none; /* Remova o contorno padrão ao focar */
-  transition: border-color 0.2s; /* Adicione uma transição suave na borda */
-  font-weight: bold;
+  padding: 1vh; 
+  border-radius: 2vh;
+  font-size: 16px;
+  outline: none; 
+  background-color: #232323;
+  color: white;
+  margin-right: 1vh;
 }
 
 .config:hover {
-
+  cursor: pointer;
 }
