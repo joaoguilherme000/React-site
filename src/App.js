@@ -1,8 +1,7 @@
 import './Style/App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./View/Layout";
 import Login from "./View/Login";
-import NoPage from "./View/NoPage";
+import NoPage from "./View/Teste";
 import Dashboard from "./View/Dashboard"
 
 function App() {

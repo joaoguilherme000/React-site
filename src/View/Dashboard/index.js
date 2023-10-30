@@ -1,5 +1,10 @@
-const Dashboard = () => {
-    return <h1>Dashboard</h1>;
+import Header from "../../Components/Header";
+
+
+export default function Dashboard () {
+    return (
+    <>
+    <Header/>
+    </>
+    )
   };
-  
-  export default Dashboard;
