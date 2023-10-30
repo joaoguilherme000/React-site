@@ -1,5 +1,6 @@
 import './index.css'
 import userIcone from '../../Assets/user.svg'
+import './index.scss'
 
 import React, {useState} from 'react';
 
