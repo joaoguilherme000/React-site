@@ -47,6 +47,7 @@ const Login = () => {
 
   return (
     <>
+    <Header/>
     <Janela handleLogin={handleLogin} />
     </>
   )

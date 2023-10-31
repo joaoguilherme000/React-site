@@ -1,5 +1,6 @@
 import logo from '../../Assets/logo.svg';
 import './index.css'
+import '../../Style/App.css'
 
 export default function Header (){
     return(
