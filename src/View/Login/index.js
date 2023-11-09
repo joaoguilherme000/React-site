@@ -13,7 +13,6 @@ function Janela ({ handleLogin }) {
 
   const handleLoginClick = () => {
     handleLogin();
-
   };
 
   return (
@@ -38,7 +37,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // lógica de login aqui
     navigate('/Dashboard');
   };
 
