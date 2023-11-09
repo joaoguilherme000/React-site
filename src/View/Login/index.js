@@ -1,5 +1,7 @@
 import Header from '../../Components/Header';
+
 import '../../Style/Janela.css'
+
 import userIcone from '../../Assets/user.svg'
 import { useNavigate } from 'react-router-dom';
 
@@ -10,13 +12,8 @@ function Janela ({ handleLogin }) {
   const [senha, setSenha] = useState("");
 
   const handleLoginClick = () => {
-    // Execute a lógica de login
-    // ...
-
-    // Após o login bem-sucedido, chame a função handleLogin
     handleLogin();
 
-    // Em vez de usar navigate('/Dashboard') aqui, você está chamando a função handleLogin que faz o redirecionamento.
   };
 
   return (

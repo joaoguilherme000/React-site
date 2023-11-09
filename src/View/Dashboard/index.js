@@ -10,10 +10,10 @@ export default function Dashboard () {
       <h1 className="titulo">Escolha</h1>
       <div className="button-container">
         <div className="linha">
-          <button className="imagens" >Imagens</button>
-          <button className="local" >Localizações</button>
+          <button className="imagens" >Pagina 1</button>
+          <button className="local" >Pagina 2</button>
         </div>
-        <button className="banco" >Banco</button>
+        <button className="banco" >Pagina 3</button>
       </div>
     </div>
     </>
