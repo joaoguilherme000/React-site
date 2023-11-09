@@ -5,15 +5,15 @@ import { useNavigate } from 'react-router-dom';
 
 function DashboardChoose ({ handleNavigation, WhatPage }) {
 
-  const Pagina1Navigate = () => {
+  const imagens = () => {
     handleNavigation(1);
   };
 
-  const Pagina2Navigate = () => {
+  const local = () => {
     handleNavigation(2);
   };
 
-  const Pagina3Navigate = () => {
+  const banco = () => {
     handleNavigation(3);
   };
 
@@ -22,10 +22,10 @@ function DashboardChoose ({ handleNavigation, WhatPage }) {
     <h1 className="titulo">Escolha</h1>
     <div className="button-container">
       <div className="linha">
-        <button className="imagens" onClick={Pagina1Navigate}>Pagina 1</button>
-        <button className="local" onClick={Pagina2Navigate}>Pagina 2</button>
+        <button className="imagens" onClick={imagens}>Pagina 1</button>
+        <button className="local" onClick={local}>Pagina 2</button>
       </div>
-      <button className="banco" onClick={Pagina3Navigate}>Pagina 3</button>
+      <button className="banco" onClick={banco}>Pagina 3</button>
     </div>
   </div>
   );
@@ -37,11 +37,11 @@ export default function Dashboard () {
 
   const handleNavigation = (WhatPage) => {
     if (WhatPage === 1) {
-      navigate('/Pagina 1');
+      navigate('/imagens');
     } else if (WhatPage === 2) {
-      navigate('/Pagina 2');
+      navigate('/local');
     } else if (WhatPage === 3) {
-      navigate('/Pagina 3');
+      navigate('/banco');
     }
   };
 
