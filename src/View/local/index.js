@@ -7,7 +7,7 @@ export default function Local () {
         <Header/>
         <section className='processando'>
             <div className='esquerda'>
-                <h2>Enviar</h2>
+                <h2 className='titulo'>Enviar</h2>
                 <h3>Certeza?</h3>
                 <div>
                     <button>Sim</button>
@@ -15,8 +15,11 @@ export default function Local () {
                 </div>
             </div>
             <div className='direita'>
-                <h2>Recebido</h2>
-                <button>Documento</button>
+                <h2 className='titulo'>Recebido</h2>
+                <label>Documento</label>
+                <div className='document'>
+                    <h3>Localização: </h3>
+                </div>
                 <div>
                     <button>Autorizar</button>
                     <button>Refatorar</button>
@@ -25,12 +28,13 @@ export default function Local () {
         </section>
         <section className='lista'>
         <div className='esquerda'>
-                <h2>Enviar</h2>
-                <h3>Certeza?</h3>
-                <div>
-                    <button>Sim</button>
-                    <button>Não</button>
-                </div>
+            <h2>Historico</h2>
+            <h3>Documento</h3>
+            <div>
+                <button>option</button>
+                <button>(user)</button>
+                <button>date</button>
+            </div>
             </div>
             <div className='direita'>
                 <h2>Recebido</h2>
