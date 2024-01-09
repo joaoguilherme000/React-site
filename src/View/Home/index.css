@@ -1,62 +1,62 @@
-.conteudo{
+main{
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-.titulo {
-    text-align: start;
-    margin: 3vh;
-}
-
-.button-container {
-    margin: 3vh;
-    height: 50vh;
-    width: 97%;
-    margin-bottom: 12%;
-    
-    display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.button-container button {
-    cursor: pointer;
-    margin: 5vh;
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    font-size: 89px;
 }
 
-.banco{
-    margin-top: 3vh;
-    padding: 2vh; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    font-size: 3vh; 
-    outline: none; 
-    transition: background-color 0.5s; 
-
+.ready {
+    transform: translateY(0px);
+    animation: aparece 1.5s ease-in-out forwards;
+    font-size: 89px;
 }
 
-.banco:hover{
-    border-color: #f4a100; 
-    background-color: #f4a100;
-}
-
-.linha{
+.button-container{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
+    gap: 60%;
 }
 
-.linha button{
-    margin-top: 3vh;
-    padding: 2vh; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    font-size: 3vh; 
-    outline: none; 
-    transition: background-color 0.5s; 
+.button-NotReady {
+    opacity: 0;
+    transform: translateY(0px);
+    animation: aparece 1.5s ease-in-out forwards;
+    font-size: 67px;
+    cursor: pointer;
+    text-align: center;
 }
 
-.linha button:hover{
-    border-color: #f4a100; 
-    background-color: #f4a100;
+.button-Ready {
+    opacity: 0;
+    transform: translateY(0px);
+    animation: aparece 1.5s ease-in-out forwards;
+    font-size: 67px;
+    cursor: pointer;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparece {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes desaparece {
+    to {
+        opacity: 0;
+    }
 }
