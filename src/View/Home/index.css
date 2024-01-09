@@ -1,6 +1,14 @@
+.tela {
+    background: url("../../assets/wallpaper.jpg") no-repeat center fixed;
+    background-size: 100% 100%;
+}
+
 main{
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -8,55 +16,36 @@ main{
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1.5s ease-in-out forwards;
-    font-size: 89px;
+    font-size: 10vh;
+    margin-bottom: 10%;
 }
 
-.ready {
-    transform: translateY(0px);
-    animation: aparece 1.5s ease-in-out forwards;
-    font-size: 89px;
-}
-
-.button-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 60%;
-}
-
-.button-NotReady {
+.choosePlay {
     opacity: 0;
     transform: translateY(0px);
-    animation: aparece 1.5s ease-in-out forwards;
-    font-size: 67px;
+    animation: fadeInUp 1s ease-in-out forwards;
+    font-size: 7vh;
     cursor: pointer;
-    text-align: center;
+    margin-top: 1%;
+    transition: font-size 0.4s ease;
 }
 
-.button-Ready {
+.choosePlay:hover {
+    font-size: 7.5vh;
+}
+
+.chooseConfig {
     opacity: 0;
     transform: translateY(0px);
-    animation: aparece 1.5s ease-in-out forwards;
-    font-size: 67px;
+    animation: fadeInUp 1s ease-in-out forwards;
+    font-size: 7vh;
     cursor: pointer;
+    margin-top: 1%;
+    transition: font-size 0.4s ease;
 }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.chooseConfig:hover {
+    font-size: 7.5vh;
 }
 
-@keyframes aparece {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes desaparece {
-    to {
-        opacity: 0;
-    }
-}
+@keyframes fadeInUp {to {opacity: 1;transform: translateY(0);}}
