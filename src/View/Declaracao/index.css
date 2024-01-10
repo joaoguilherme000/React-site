@@ -1,0 +1,18 @@
+.merdinha {
+    display: flex;
+    justify-content: center;
+}
+
+.declara {
+    font-size: 7vh;
+    align-self: center;
+    text-align: center;
+    color: #f4f800;
+    background-color: #ff0000;
+}
+.suastica {
+    background: url("./idiota.jpg") no-repeat center fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100%;
+}

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './View/Home';
 import CapituloUm from './View/CapituloUm';
+import Declaracao from './View/Declaracao';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/CapituloUm" element={<CapituloUm/>} />
+        <Route path="/Declaracao" element={<Declaracao/>} />
       </Routes>
     </BrowserRouter>
   );

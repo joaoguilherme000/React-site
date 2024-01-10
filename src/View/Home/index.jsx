@@ -11,11 +11,16 @@ export default function Home () {
     navigate('/CapituloUm');
   };
 
+  const handleDeclaration = () => {
+    navigate('/Declaracao');
+  };
+
   return (
     <body className="tela">
       <main className="playable">
         <h1 className="fade-in">Crimem la morte: dois corações</h1>
         <h2 className="choosePlay" onClick={handlePlayClick}>Jogar</h2>
+        <h2 className="choosePlay" onClick={handleDeclaration}>Declaração</h2>
         <h3 className="chooseConfig">Configurações</h3>
       </main>
     </body>

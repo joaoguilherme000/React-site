@@ -23,7 +23,7 @@ img {
     justify-content: center;
     flex-direction: column;
     background-size: 100% 100%;
-    background-image: url(./back.jpg);
+    background-image: url(./a2.jpg);
 }
 .parte3 {
     display: flex;
@@ -31,7 +31,7 @@ img {
     justify-content: center;
     flex-direction: column;
     background-size: 100% 100%;
-    background-image: url(./back.jpg);
+    background-image: url(./a3.jpg);
 }
 
 .parte4 {
@@ -40,7 +40,7 @@ img {
     justify-content: center;
     flex-direction: column;
     background-size: 100% 100%;
-    background-image: url(./back.jpg);
+    background-image: url(./a2.jpg);
 }
 
 .parte5 {
@@ -49,7 +49,7 @@ img {
     justify-content: center;
     flex-direction: column;
     background-size: 100% 100%;
-    background-image: url(./back.jpg);
+    background-image: url(./a3.jpg);
 }
 .name {
     position: absolute;
