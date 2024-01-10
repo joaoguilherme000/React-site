@@ -1,0 +1,110 @@
+.telaConfig {
+    background: url("./loli.webp") no-repeat center fixed;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.configContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh;
+    background-color:rgba(0, 0, 0, 0.526);
+    backdrop-filter: blur(1vh);
+    height: 80vh;
+    width: 50%;
+    border-radius: 9px;
+}
+
+.configTexto {
+    font-size: 4vh;
+    margin-bottom: 10px;
+    transition: font-size 0.4s ease;
+    cursor: pointer;
+}
+
+.configTexto:hover {
+    font-size: 4.5vh;
+}
+
+.configTitle {
+    text-align: center;
+    font-size: 9vh;
+    margin-bottom: 25px;
+}
+
+.configToHome {
+    display: flex;
+    background-color: #000000;
+    position: absolute;
+    height: 5vh;
+    width: 21vh;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    bottom: 2vh;
+    right: 2vh;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.configContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50vh;
+    height: 80vh;
+    margin-left: 2vh;
+}
+
+.configExplica {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh;
+    background-color:rgba(0,0,0,0.3);
+    backdrop-filter: blur(1vh);
+    height: 50vh;
+    width: 100%;
+    border-radius: 9px;
+}
+
+.configVersion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.6vh;
+    padding: 5vh;
+    margin-top: 5vh;
+    background-color:rgba(0, 0, 0, 0.932);
+    backdrop-filter: blur(1vh);
+    height: 2vh;
+    width: 100%;
+    border-radius: 9px;
+}
+
+.seeImage {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    top: 3vh;
+    right: 5vh;
+    font-size: 2.5vh;
+    height: 6vh;
+    width: 45vh;
+    transition: font-size 0.4s ease;
+    cursor: pointer;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.633);
+    border-radius: 5vh;
+}
+
+.seeImage:hover {
+    font-size: 3vh;
+}

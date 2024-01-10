@@ -1,6 +1,8 @@
 .merdinha {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .declara {
@@ -15,4 +17,19 @@
     background-size: 100% 100%;
     height: 100vh;
     width: 100%;
+}
+
+.homeButton {
+    display: flex;
+    background-color: #000000;
+    position: absolute;
+    height: 5vh;
+    width: 15vh;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    top: 55vh;
+    cursor: pointer;
+    border-radius: 5px;
 }
