@@ -1,8 +1,11 @@
 import './index.css'
 import '../../Style/Reset.css'
 
+import { firestore, collection,doc,setDoc, getDoc } from '../../assets/firebaseConfig.js';
+
 import musica from './unao.m4a';
 import efeito from './efeito.mp3';
+
 
 import React, { useEffect, useState,useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -12,20 +15,37 @@ export default function Configuracao () {
   const [enable, setEnable] = useState(false);
   const [seeImage, setSeeImage] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [effect, setEffect] = useState(false);
   const [volumeMusica, setVolumeMusica] = useState(50);
-  const [volumeEfeitosSonoros, setVolumeEfeitosSonoros] = useState(50); 
+  const [volumeEfeitosSonoros, setVolumeEfeitosSonoros] = useState(50);
+  const [explica, setExplica] = useState("");
   const efeitoRef = useRef(null);
   
   const navigate = useNavigate();
 
-  const handleBackClick = () => {
-    navigate('/');
-  };
+  const handleBackClick = async () => {
+    console.log("tentou");
+    try {
+      const userCollection = collection(firestore, 'Config');
+      const userDocRef = doc(userCollection, '9oEfvzZG2zhsn33NBtna');
   
+      await setDoc(userDocRef, {
+        volumeMusica: volumeMusica,
+        volumeEfeitosSonoros: volumeEfeitosSonoros,
+      }, { merge: true });
+  
+      navigate('/');
+    } catch (error) {
+      console.error('Erro ao salvar no Firestore:', error);
+    }
+  };
   
   const toggleModoChorao = () => {
     setEnable(!enable);
+    if (explica === "") {
+      setExplica("Não tem kkk");
+    } else {
+      setExplica("");
+    }
   };
 
   const toggleImage = () => {
@@ -73,6 +93,23 @@ export default function Configuracao () {
     if (audioRef.current) {
       audioRef.current.pause();
     }
+    const fetchData = async () => {
+      try {
+        const userCollection = collection(firestore, 'Config');
+        const userDocRef = doc(userCollection, '9oEfvzZG2zhsn33NBtna');
+
+        const docSnapshot = await getDoc(userDocRef);
+        if (docSnapshot.exists()) {
+          const userData = docSnapshot.data();
+          setVolumeMusica(userData.volumeMusica || 50);
+          setVolumeEfeitosSonoros(userData.volumeEfeitosSonoros || 50);
+        }
+      } catch (error) {
+        console.error('Erro ao obter dados do Firestore:', error);
+      }
+    };
+
+    fetchData(); // Chamada à função que busca os dados
   }, []);
 
   return (
@@ -120,7 +157,7 @@ export default function Configuracao () {
         </section>
         <section className="configContent">
           <section className="configExplica">
-            <div>Explicação: </div>
+            <div>Explicação: {explica}</div>
           </section>
           <section className="configVersion">
             <div>Versão dessa merda: {version}</div>

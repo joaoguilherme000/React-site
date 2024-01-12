@@ -1,6 +1,7 @@
 import './capUm.css'
 import '../../Style/Reset.css'
 import MinhaImagem from './felizErnie.png';
+import song1 from './song1.m4a';
 
 import React, { useEffect, useState } from 'react';
 
@@ -26,24 +27,6 @@ export default function CapituloUm () {
     }
   };
 
-  /*useEffect(() => {
-    personTalk();
-  }, []);
-
-  const personTalk = () => {
-    if (classes = 'parte1') {
-      setName("Ernie");
-    } else if (classes = 'parte2'){
-      setName("parte3");
-    } else if (classes = 'parte3'){
-      setName("parte4");
-    } else if (classes = 'parte4'){
-      setName("parte5");
-    } else {
-      setName("erro");
-    }
-    */
-
   const handleNextClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % classes.length);
   };
@@ -62,6 +45,12 @@ export default function CapituloUm () {
   
 
   useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play().then(() => {
+      }).catch((error) => {
+        console.error('Erro ao iniciar a reprodução:', error);
+      });
+    }
     document.body.className = classes[currentIndex];
 
     return () => {
@@ -69,8 +58,14 @@ export default function CapituloUm () {
     };
   }, [currentIndex]);
 
+  const audioRef = React.createRef();
+
   return (
     <body className={`parte1 ${classes[currentIndex]}`}>
+      <audio ref={audioRef}>
+        <source src={song1} type="audio/mp4" />
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
       <section className="dialogBox" onClick={handleNextLine}>
         {!noPerson &&(
           <>
