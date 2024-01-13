@@ -14,9 +14,11 @@ main{
 
 .fade-in {
     opacity: 0;
+    align-self: center;
+    text-align: center;
     transform: translateY(20px);
     animation: fadeInUp 1.5s ease-in-out forwards;
-    font-size: 10vh;
+    font-size: 9vh;
     margin-bottom: 10%;
 }
 
@@ -49,3 +51,50 @@ main{
 }
 
 @keyframes fadeInUp {to {opacity: 1;transform: translateY(0);}}
+
+/* TELAS */
+@media only screen and (max-width: 768px) {
+  .fade-in {
+    font-size: 7vh;
+  }
+
+  .choosePlay {
+    font-size: 5vh;
+  }
+
+  .choosePlay:hover {
+    font-size: 5.5vh;
+  }
+
+  .chooseConfig {
+    font-size: 5vh;
+  }
+
+  .chooseConfig:hover {
+    font-size: 5.5vh;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .fade-in {
+    font-size: 5vh;
+    margin-bottom: 55%;
+  }
+
+  .choosePlay {
+    font-size: 3vh;
+    margin-bottom: 5%;
+  }
+
+  .choosePlay:hover {
+    font-size: 3.5vh;
+  }
+
+  .chooseConfig {
+    font-size: 3vh;
+  }
+
+  .chooseConfig:hover {
+    font-size: 3.5vh;
+  }
+}

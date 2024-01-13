@@ -78,6 +78,7 @@ section {
     height: 50vh;
     width: 100%;
     border-radius: 9px;
+    font-size: 4vh;
 }
 
 .configVersion {
@@ -118,3 +119,216 @@ section {
 }
 
 @keyframes fadeInUp {to {opacity: 1;transform: translateY(0);}}
+
+/* TELAS */
+@media only screen and (max-width: 912px) {
+  .configTitle {
+    font-size: 7vh;
+  }
+  .configTexto {
+    font-size: 3vh;
+    margin-bottom: 2vh;
+  }
+  .configTexto:hover {
+    font-size: 3vh;
+  }
+  .configToHome {
+    display: flex;
+    background-color: #000000;
+    position: absolute;
+    height: 4vh;
+    width: 17vh;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    bottom: 2vh;
+    right: 2vh;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+  
+@media only screen and (max-width: 768px) {
+  .configTitle {
+    font-size: 6vh;
+  }
+  .configTexto {
+    font-size: 3vh;
+    margin-bottom: 2vh;
+  }
+  .configTexto:hover {
+    font-size: 3vh;
+  }
+}
+
+@media only screen and (max-width: 691px) {
+  .configContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 4vh;
+    background-color:rgba(0, 0, 0, 0.526);
+    backdrop-filter: blur(1vh);
+    height: 80vh;
+    width: 45%;
+    border-radius: 9px;
+  }
+  .configContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50vh;
+    height: 80vh;
+    margin-left: 2vh;
+  }
+}
+
+@media only screen and (max-width: 666px) {
+  .configTitle {
+    font-size: 5vh;
+  }
+  .configTexto {
+    font-size: 3vh;
+    margin-bottom: 2vh;
+  }
+}
+
+@media only screen and (max-width: 633px) {
+  .telaConfig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .seeImage {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5vh;
+    transition: font-size 0.4s ease;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.633);
+    border-radius: 5vh;
+    margin: 0;
+  }
+  .configContainer {
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    padding: 4vh;
+    background-color:rgba(0, 0, 0, 0.526);
+    backdrop-filter: blur(1vh);
+    height: 80vh;
+    width: 80%;
+    border-radius: 9px;
+  }
+  .configContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 81%;
+    height: 80vh;
+    margin-left: 2vh;
+  }
+  .configExplica {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh;
+    background-color:rgba(0,0,0,0.3);
+    backdrop-filter: blur(1vh);
+    border-radius: 9px;
+    font-size: 4vh;
+  }
+  .configTitle {
+    font-size: 7vh;
+  }
+  .configTexto {
+    font-size: 4.5vh;
+    margin-bottom: 3vh;
+  }
+  .configTexto:hover {
+    font-size: 4.5vh;
+  }
+  .configToHome {
+    display: flex;
+    background-color: #000000;
+    position: absolute;
+    height: 6vh;
+    width: 22vh;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    bottom: 2vh;
+    right: 2vh;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+@media only screen and (max-width: 529px) {
+  .configTitle {
+    font-size: 6vh;
+  }
+  .configTexto {
+    font-size: 4vh;
+    margin-bottom: 2vh;
+  }
+  .configTexto:hover {
+    font-size: 4vh;
+  }
+}
+
+@media only screen and (max-width: 421px) {
+  .configTitle {
+    font-size: 4.3vh;
+  }
+  .configTexto {
+    font-size: 3.5vh;
+    margin-bottom: 2vh;
+  }
+  .configToHome {
+    display: flex;
+    background-color: #000000;
+    position: absolute;
+    height: 4vh;
+    width: 19vh;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    bottom: 2vh;
+    right: 2vh;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+@media only screen and (max-width: 356px) {
+  .configTitle {
+    font-size: 4vh;
+  }
+  .configTexto {
+    font-size: 3vh;
+    margin-bottom: 2vh;
+  }
+  .configTexto:hover {
+    font-size: 3vh;
+  }
+  .seeImage {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vh;
+    width: 60%;
+    transition: font-size 0.4s ease;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.633);
+    border-radius: 5vh;
+    margin: 0;
+  }
+}
