@@ -42,8 +42,6 @@ export default function CapituloUm () {
 
   const currentClass = classes[currentIndex];
 
-  
-
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.play().then(() => {

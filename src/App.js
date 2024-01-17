@@ -5,6 +5,7 @@ import Home from './View/Home';
 import CapituloUm from './View/CapituloUm';
 import Declaracao from './View/Declaracao';
 import Configuracao from './View/Config';
+import Denuncia from './View/Denuncia';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/CapituloUm" element={<CapituloUm/>} />
         <Route path="/Declaracao" element={<Declaracao/>} />
         <Route path="/Configuracao" element={<Configuracao/>} />
+        <Route path="/Denuncia" element={<Denuncia/>} />
       </Routes>
     </BrowserRouter>
   );

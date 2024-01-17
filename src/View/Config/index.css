@@ -1,10 +1,10 @@
 .telaConfig {
-    background: url("./loli.webp") no-repeat center fixed;
-    background-size: 100% 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+  background: url("./loli.webp") no-repeat center fixed;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 section {
@@ -47,8 +47,8 @@ section {
     display: flex;
     background-color: #000000;
     position: absolute;
-    height: 5vh;
-    width: 21vh;
+    height: 10%;
+    width: 35%;
     align-items: center;
     justify-content: center;
     align-self: center;
@@ -57,6 +57,7 @@ section {
     right: 2vh;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 3vh;
 }
 
 .configContent {
@@ -131,21 +132,6 @@ section {
   }
   .configTexto:hover {
     font-size: 3vh;
-  }
-  .configToHome {
-    display: flex;
-    background-color: #000000;
-    position: absolute;
-    height: 4vh;
-    width: 17vh;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    text-align: center;
-    bottom: 2vh;
-    right: 2vh;
-    cursor: pointer;
-    border-radius: 5px;
   }
 }
   
@@ -252,21 +238,6 @@ section {
   .configTexto:hover {
     font-size: 4.5vh;
   }
-  .configToHome {
-    display: flex;
-    background-color: #000000;
-    position: absolute;
-    height: 6vh;
-    width: 22vh;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    text-align: center;
-    bottom: 2vh;
-    right: 2vh;
-    cursor: pointer;
-    border-radius: 5px;
-  }
 }
 
 @media only screen and (max-width: 529px) {
@@ -294,8 +265,8 @@ section {
     display: flex;
     background-color: #000000;
     position: absolute;
-    height: 4vh;
-    width: 19vh;
+    height: 10%;
+    width: 40%;
     align-items: center;
     justify-content: center;
     align-self: center;

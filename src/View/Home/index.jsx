@@ -24,6 +24,7 @@ export default function Home () {
         <h1 className="fade-in">Crimem la morte: dois corações</h1>
         <h2 className="choosePlay" onClick={handlePlayClick}>Jogar</h2>
         <h3 className="chooseConfig" onClick={handleConfig}>Configurações</h3>
+        <h2 className="choosePlay" onClick={handleDeclaration}>Declaração</h2>
       </main>
     </body>
   )

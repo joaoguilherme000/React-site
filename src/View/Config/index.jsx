@@ -17,13 +17,16 @@ export default function Configuracao () {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volumeMusica, setVolumeMusica] = useState(50);
   const [volumeEfeitosSonoros, setVolumeEfeitosSonoros] = useState(50);
+  const [volumeChanged, setVolumeChanged] = useState(false);
   const [explica, setExplica] = useState("");
   const efeitoRef = useRef(null);
   
   const navigate = useNavigate();
 
   const handleBackClick = async () => {
-    console.log("tentou");
+    if (volumeChanged) {
+      console.log('Salvando alterações...');
+    }
     try {
       const userCollection = collection(firestore, 'Config');
       const userDocRef = doc(userCollection, '9oEfvzZG2zhsn33NBtna');
@@ -37,6 +40,8 @@ export default function Configuracao () {
     } catch (error) {
       console.error('Erro ao salvar no Firestore:', error);
     }
+    console.log('Voltando...');
+    setVolumeChanged(false);
   };
   
   const toggleModoChorao = () => {
@@ -54,6 +59,7 @@ export default function Configuracao () {
 
   const handleVolumeMusicaChange = (event) => {
     setVolumeMusica(event.target.value);
+    setVolumeChanged(true);
     if (audioRef.current) {
       audioRef.current.volume = event.target.value / 100;
     }
@@ -61,6 +67,7 @@ export default function Configuracao () {
 
   const handleVolumeEfeitosSonorosChange = (event) => {
     setVolumeEfeitosSonoros(event.target.value);
+    setVolumeChanged(true);
     if (efeitoRef.current) {
       efeitoRef.current.volume = event.target.value / 100;
     }
@@ -112,14 +119,28 @@ export default function Configuracao () {
     fetchData(); // Chamada à função que busca os dados
   }, []);
 
+  const handleDenuncia = () => {
+    const confirmDenuncia = window.confirm("Tem certeza que deseja denunciar o jogo?");
+    
+    if (confirmDenuncia) {
+      const confirmOutro = window.confirm("Mesmo que isso dependa da sua vida?");
+      if (confirmOutro) {
+        navigate('/Denuncia');
+      }
+    }
+  };
+
   return (
     <body className="telaConfig">
       {!seeImage ?(
       <>
         <section className="configContainer">
           <div className="configTitle">Configuração</div>
-          <div className={`configTexto ${enable ? 'ativado' : 'desativado'}`} onClick={toggleModoChorao}>
+          <div className="configTexto" onClick={toggleModoChorao}>
             Modo Chorão: {enable ? 'ativado' : 'desativado'}
+          </div>
+          <div className="configTexto" onClick={handleDenuncia}>
+            Denunciar jogo
           </div>
           <div className="configTexto">Volume da musica {volumeMusica}
           <input
@@ -153,7 +174,10 @@ export default function Configuracao () {
             <source src={efeito} type="audio/mp3" />
             Seu navegador não suporta o elemento de áudio.
           </audio>
-          <div className="configToHome configTexto" onClick={handleBackClick}>Voltar</div>
+          <div className="configToHome" onClick={handleBackClick}>
+            {volumeChanged && "Salvar e "}
+            Voltar
+          </div>
         </section>
         <section className="configContent">
           <section className="configExplica">

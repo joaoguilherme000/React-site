@@ -1,0 +1,36 @@
+.telaDenuncia {
+  background: url("./borderlands.jpg") no-repeat center fixed;
+  background-size: 100% 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.denunciaTexto {
+  font-size: 6vh;
+  text-align: center;
+  cursor: pointer;
+}
+
+.denunciaRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20vh;
+}
+
+.denunciaEscolha {
+  transition: font-size 0.3s ease;
+}
+
+.denunciaEscolha:hover {
+  font-size: 7vh;
+}
+
+.denunciaHim {
+  height: 60vh;
+  cursor: grab;
+}
